@@ -115,7 +115,7 @@
 .lineSeparator {
     position:absolute;
     width: 100%;
-    top: 180px;
+    top: 480px;
     left: 0px;
     border: 1px;
     rotate: -0 deg;
@@ -171,6 +171,7 @@
     white-space: nowrap; /* Evitar que el texto se envuelva */
     padding: 10px;
     border-radius: 5px;
+    font-family: Roboto;
 }
 .containerChat2 {
     width: 128px;
@@ -195,39 +196,39 @@
      background-clip: padding-box;
      background-color: rgb(121, 20, 215);
     color: #E9E9E9;
-    
+    font-family: Roboto;
 }
 
 @media (min-width: 768px) {
-    .container1 {
-      max-width: 768px; /* Ajusta el ancho máximo para tabletas */
-    }
+  .container1 {
+    max-width: 768px; /* Ajusta el ancho máximo para tabletas */
   }
-  
-  /* Media query para dispositivos móviles */
-  @media (max-width: 767px) {
-    .container1 {
-      max-width: 100%; /* Haz que el contenedor ocupe el 100% del ancho de la pantalla en dispositivos móviles */
-      border-radius: 0; /* Elimina el borde redondeado en dispositivos móviles si lo deseas */
-    }
-  
-    .container2,
-    .container3,
-    .container4 {
-      width: 100%; /* Asegúrate de que estos elementos ocupen el 100% del ancho del contenedor en dispositivos móviles */
-    }
-  
-    .lineSeparator {
-      top: 180px; /* Ajusta la posición del separador si es necesario en dispositivos móviles */
-    }
-  
-    .containerChat1,
-    .containerChat2 {
-      width: 100%; /* Asegúrate de que estos elementos ocupen el 100% del ancho del contenedor en dispositivos móviles */
-    }
-  
-    .chat2 {
-      width: 100%; /* Asegúrate de que el chat2 ocupe el 100% del ancho del contenedor en dispositivos móviles */
-      margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles si lo deseas */
-    }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .container1 {
+    max-width: 100%; /* Haz que el contenedor ocupe el 100% del ancho de la pantalla en dispositivos móviles */
+    border-radius: 0; /* Elimina el borde redondeado en dispositivos móviles si lo deseas */
   }
+
+  .container2,
+  .container3,
+  .container4 {
+    width: 100%; /* Asegúrate de que estos elementos ocupen el 100% del ancho del contenedor en dispositivos móviles */
+  }
+
+  .lineSeparator {
+    top: 180px; /* Ajusta la posición del separador si es necesario en dispositivos móviles */
+  }
+
+  .containerChat1,
+  .containerChat2 {
+    width: 100%; /* Asegúrate de que estos elementos ocupen el 100% del ancho del contenedor en dispositivos móviles */
+  }
+
+  .chat2 {
+    width: 100%; /* Asegúrate de que el chat2 ocupe el 100% del ancho del contenedor en dispositivos móviles */
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles si lo deseas */
+  }
+}
