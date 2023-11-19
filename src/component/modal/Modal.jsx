@@ -18,16 +18,25 @@ const Modal = () => {
         </div> 
         <div className='container3'>
           <div className='containerChat1'>
-            <img src={svgIcon} alt="icon" className='iconChat1'/>
-          <p className='chat1'>Hi,how can i help you?</p>
+            <ul>
+              <li style={{textDecoration:'none'}}>
+                <img src={svgIcon} alt="icon" className='iconChat1'/>
+                <p className='chat1'>Hi,how can i help you?</p>
+              </li>
+            </ul>
           </div>
           <div className='containerChat2'>
-          <p className='chat2'>How are you?</p>
+            <ul>
+              <li>
+                <p className='chat2'>How are you?</p>
+              </li>
+            </ul>
           </div>
           </div> 
           <div className='lineSeparator'></div>
         <div className='container4'>
-          <p className='textBootom'>Ask your question...</p>
+          <input type="text" placeholder='Ask your question...'  className='textBootom'/>
+          {/* <p className='textBootom'>Ask your question...</p> */}
           <img src={svgButtom} alt="icon" className='buttomBootom'/>
         </div> 
       </div>

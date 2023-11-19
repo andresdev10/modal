@@ -7,12 +7,19 @@
     border-radius: 25px;
     background: #FAFAFA;
     display: grid;
-  grid-template-rows: auto auto auto auto; /* Cuatro filas automáticas */
-  grid-template-columns: 1fr; /* Una columna */
-  gap: 10px; /* Espacio entre celdas */
+  /* grid-template-rows: auto auto auto auto; 
+  grid-template-columns: 1fr; 
+  gap: 10px;  */
+
+  grid-template-areas:
+  "header"
+  "main"
+  "separator"
+  "footer";
   }
   
   .container2 {
+    grid-area: header;
     width: 430px;
     height: 65.26px;
     top: 10px; 
@@ -21,16 +28,21 @@
     align-items: center;
     border-radius: 25px 25px 0 0;
     background: #CE5151;
-    grid-row: 1; /* Comienza en la primera fila */
-    grid-column: span 1; /* Ocupa una columna completa */
+    /* grid-row: 1; 
+    grid-column: span 1;  */
   }
 
   .container3 {
-    grid-row: 2; /* Comienza en la segunda fila */
-    grid-column: span 1; /* Ocupa una columna completa */
+    grid-area: main;
+    /* grid-row: 2; 
+    grid-column: span 1;  */
     padding: 10px; 
     display: grid;
     align-items: center;
+    overflow-y: auto;
+    max-height: calc(580px - 10px);
+    
+    width: auto;
   }
   
   .group1 {
@@ -105,17 +117,19 @@
 }
 
 .container4 {
+  grid-area: footer;
     display: flex;
     align-items: center;
-    grid-row: 5; /* Comienza en la tercera fila */
-    grid-column: span 1; /* Ocupa una columna completa */
+    /* grid-row: 5; 
+    grid-column: span 1;  */
     padding: 10px;
 }
 
 .lineSeparator {
+    grid-area: separator;
     position:absolute;
     width: 100%;
-    top: 480px;
+    top: 144px;
     left: 0px;
     border: 1px;
     rotate: -0 deg;
@@ -136,7 +150,8 @@
     letter-spacing: 0em;
     text-align: left;
     color: #5E5E5E;
-
+    border: none;
+    outline: none;
 }
    
 .buttomBootom {
@@ -198,6 +213,18 @@
     color: #E9E9E9;
     font-family: Roboto;
 }
+.containerChat1 ul,
+.containerChat2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.containerChat1 li,
+.containerChat2 li {
+    margin-left: 0; /* Ajusta según sea necesario */
+}
+
 
 @media (min-width: 768px) {
   .container1 {
