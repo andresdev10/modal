@@ -36,7 +36,6 @@ const Modal = () => {
           <div className='lineSeparator'></div>
         <div className='container4'>
           <input type="text" placeholder='Ask your question...'  className='textBootom'/>
-          {/* <p className='textBootom'>Ask your question...</p> */}
           <img src={svgButtom} alt="icon" className='buttomBootom'/>
         </div> 
       </div>

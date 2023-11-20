@@ -34,6 +34,8 @@
 
   .container3 {
     grid-area: main;
+    position: relative;
+    height: 340px;
     /* grid-row: 2; 
     grid-column: span 1;  */
     padding: 10px; 
@@ -129,7 +131,7 @@
     grid-area: separator;
     position:absolute;
     width: 100%;
-    top: 144px;
+    top: 5px;
     left: 0px;
     border: 1px;
     rotate: -0 deg;
@@ -141,7 +143,7 @@
     width: 343px;
     height: 16px;
     position: relative;
-    top: 30px;
+    top: 0px;
     left: 15px;
     font-family: Roboto;
     font-size: 16px;
@@ -158,7 +160,7 @@
     width: 20px;
     height: 16.32px;
     position: relative;
-    top: 30px;
+    top: 0px;
     left: 25px;
     color: #0295FF;
 
@@ -202,7 +204,7 @@
 .chat2{
     background-color: #ACACAC;
     display: inline-block;
-    white-space: nowrap; /* Evitar que el texto se envuelva */
+    white-space: nowrap; 
     padding: 10px;
     border-radius: 5px;
     position: relative;
@@ -222,40 +224,46 @@
 
 .containerChat1 li,
 .containerChat2 li {
-    margin-left: 0; /* Ajusta según sea necesario */
+    margin-left: 0; 
 }
 
 
 @media (min-width: 768px) {
   .container1 {
-    max-width: 768px; /* Ajusta el ancho máximo para tabletas */
+    max-width: 768px; 
   }
 }
 
 /* Media query para dispositivos móviles */
 @media (max-width: 767px) {
+  
   .container1 {
-    max-width: 100%; /* Haz que el contenedor ocupe el 100% del ancho de la pantalla en dispositivos móviles */
-    border-radius: 0; /* Elimina el borde redondeado en dispositivos móviles si lo deseas */
+    max-width: 100%; 
+    border-radius: 25px; 
+    /* margin-left: 34px; */
   }
 
   .container2,
   .container3,
   .container4 {
-    width: 100%; /* Asegúrate de que estos elementos ocupen el 100% del ancho del contenedor en dispositivos móviles */
+    width: 100%; 
   }
 
   .lineSeparator {
-    top: 180px; /* Ajusta la posición del separador si es necesario en dispositivos móviles */
+    top: -17px; 
   }
 
   .containerChat1,
   .containerChat2 {
-    width: 100%; /* Asegúrate de que estos elementos ocupen el 100% del ancho del contenedor en dispositivos móviles */
+    width: 100%; 
+    padding: 10px;
   }
 
   .chat2 {
-    width: 100%; /* Asegúrate de que el chat2 ocupe el 100% del ancho del contenedor en dispositivos móviles */
-    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles si lo deseas */
+   margin-left:275px;
+  }
+  .container3 {
+    height: 379px;
+    width: initial;
   }
 }

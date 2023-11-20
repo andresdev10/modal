@@ -7,3 +7,10 @@ body {
   min-height: 100vh;
   background: linear-gradient(112.9deg, #6D6D6D 0%, #00E0FF 100%);
 }
+
+@media (max-width: 767px) {
+  .App{
+    padding: 10px;
+    margin: 0;
+  }
+}
