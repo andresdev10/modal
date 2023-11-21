@@ -1,13 +1,15 @@
 
 import './App.css'
-import Modal from './component/modal/Modal'
+import Chat from './component/chatBot/Chat'
+//import Modal from './component/modal/Modal'
 
 function App() {
  
 
   return (
     <div className="App">
-      <Modal />
+      {/* <Modal /> */}
+     <Chat />
     </div>
   )
 }

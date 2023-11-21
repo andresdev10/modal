@@ -17,21 +17,21 @@ const Modal = () => {
             <button className='logout'>Logout</button>
         </div> 
         <div className='container3'>
-          <div className='containerChat1'>
+          {/* <div className='containerChat1'> */}
             <ul>
               <li style={{textDecoration:'none'}}>
                 <img src={svgIcon} alt="icon" className='iconChat1'/>
                 <p className='chat1'>Hi,how can i help you?</p>
               </li>
-            </ul>
-          </div>
-          <div className='containerChat2'>
-            <ul>
+            {/* </ul> */}
+          {/* </div> */}
+          {/* <div className='containerChat2'> */}
+            {/* <ul> */}
               <li>
                 <p className='chat2'>How are you?</p>
               </li>
             </ul>
-          </div>
+          {/* </div> */}
           </div> 
           <div className='lineSeparator'></div>
         <div className='container4'>
