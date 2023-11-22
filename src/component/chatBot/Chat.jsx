@@ -1,7 +1,7 @@
 import React from 'react'
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Chat.css'
 import CustomHeader from '../customHeader/CustomHeader';
 import StepsComponent from '../steps/StepsComponent';
@@ -17,35 +17,20 @@ const theme = {
   userBubbleColor: '#7914d7',
   userFontColor: '#fff',
 };
+
 const Chat = () => {
-  const [ticketNumber, setTicketNumber] = useState("");
-  const [userInput, setUserInput] = useState("");
-  const [mountInput, setmountInput] = useState("");
+  const [ticketNumber, setTicketNumber] = useState("1234567");
 
 
-  const handleEnd = ({ steps }) => {
-    steps.forEach((step) => {
-      if (step.id === '4') {
-        setUserInput(step.value)
-      }
-      if (step.id === '6') {
-        setmountInput(step.value)
-      }
-    });
-  };
- 
   
+  const renderTicketNumber = () => `Your Ticket Number is #${ticketNumber}`;
   
-  const renderTicketNumber = () => `Your Ticket Number is #${userInput}`;
-  console.log(userInput)
-  console.log(mountInput)
   return (
     <div>
       <ThemeProvider theme={theme}>
-
          <ChatBot
-           steps={StepsComponent({ setUserInput, renderTicketNumber, setmountInput  })} 
-            handleEnd={handleEnd}
+           steps={StepsComponent({  renderTicketNumber  })} 
+            // handleEnd={handleEnd}
             headerComponent={<CustomHeader />}
         />
       </ThemeProvider>
