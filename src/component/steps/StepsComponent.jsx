@@ -1,7 +1,7 @@
 // StepsComponent.jsx
 import React from 'react';
 
-const StepsComponent = ({ setUserInput ,renderTicketNumber }) => {
+const StepsComponent = ({ setUserInput,setmountInput ,renderTicketNumber }) => {
   const steps = [
     {
       id: '1',
@@ -31,11 +31,27 @@ const StepsComponent = ({ setUserInput ,renderTicketNumber }) => {
     },
     {
       id: '5',
-      message: 'Ok give me a few minutes while I create your ticket with the number {previousValue}',
+      message: 'insert bet amount',
       trigger: '6'
     },
     {
       id: '6',
+      user: true,
+      validator: (value) => {
+        if (isNaN(value)) {
+          return 'value should be a number';
+        }
+        return true;
+      },
+      trigger: '7',
+    },
+    {
+      id: '7',
+      message: 'Ok give me a few minutes while I create your ticket with the number',
+      trigger: '8'
+    },
+    {
+      id: '8',
       message:  renderTicketNumber,
       end: true,
     },

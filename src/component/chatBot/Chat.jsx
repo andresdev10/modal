@@ -20,6 +20,7 @@ const theme = {
 const Chat = () => {
   const [ticketNumber, setTicketNumber] = useState("");
   const [userInput, setUserInput] = useState("");
+  const [mountInput, setmountInput] = useState("");
 
 
   const handleEnd = ({ steps }) => {
@@ -27,17 +28,23 @@ const Chat = () => {
       if (step.id === '4') {
         setUserInput(step.value)
       }
+      if (step.id === '6') {
+        setmountInput(step.value)
+      }
     });
   };
+ 
+  
   
   const renderTicketNumber = () => `Your Ticket Number is #${userInput}`;
-
+  console.log(userInput)
+  console.log(mountInput)
   return (
     <div>
       <ThemeProvider theme={theme}>
 
          <ChatBot
-           steps={StepsComponent({ setUserInput, renderTicketNumber  })} 
+           steps={StepsComponent({ setUserInput, renderTicketNumber, setmountInput  })} 
             handleEnd={handleEnd}
             headerComponent={<CustomHeader />}
         />
